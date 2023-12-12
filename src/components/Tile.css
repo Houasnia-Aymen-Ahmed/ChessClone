@@ -1,0 +1,29 @@
+.tile {
+  @apply grid h-[100px] w-[100px] place-content-center;
+}
+
+.tile .chess-piece {
+  @apply h-[100px] w-[100px] bg-[length:80px] bg-center bg-no-repeat;
+}
+
+.tile .chess-piece:hover {
+  @apply cursor-grab;
+}
+
+.tile .chess-piece:active {
+  @apply cursor-grabbing;
+}
+
+.tile img {
+  @apply w-20;
+}
+
+.tile-highlight:not(.chess-piece-tile)::before {
+  content: " ";
+  @apply h-6 w-6 rounded-[50%] bg-[#00000066];
+}
+
+.tile-highlight.chess-piece-tile::before {
+  content: " ";
+  @apply absolute h-[100px] w-[100px] rounded-[50%] border-[5px] border-solid border-[#00000066];
+}

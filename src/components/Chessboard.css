@@ -1,0 +1,41 @@
+#chessboard {
+  background-image: url(/src/assets/board.png);
+  @apply grid h-[800px] w-[800px] grid-cols-8 grid-rows-8 bg-cover bg-center bg-no-repeat;
+}
+
+.modal {
+  @apply absolute bottom-0 left-0 right-0 top-0;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal > .modal-body {
+  @apply top-special left-special absolute flex h-[300px] w-[800px] items-center justify-around bg-[#7f7f7fcc];
+}
+
+.modal > .modal-body > img {
+  @apply h-[120px] rounded-[50%] p-[20px];
+}
+
+.modal > .modal-body > img:hover {
+  @apply cursor-pointer bg-[#ffffff4d];
+}
+
+.modal > .modal-body > .checkmate-body {
+  @apply flex flex-col gap-12;
+}
+
+.modal > .modal-body > .checkmate-body > span {
+  font-size: 32px;
+  @apply text-3xl;
+}
+
+.modal > .modal-body > .checkmate-body > button {
+  @apply rounded-md border-none bg-[#779556] px-12 py-6 text-3xl text-white;
+}
+
+.modal > .modal-body > .checkmate-body > button:hover {
+  @apply cursor-pointer;
+}
